@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/testView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#226746"
+    android:backgroundTint="#226746"
+    tools:context=".Fangstatistik">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-67dp"
+        tools:layout_editor_absoluteY="62dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:backgroundTint="#8BC34A" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/RVparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="139dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="#F52BAE66"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="#FFFCFC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fischHinzufuegen"
+        android:layout_width="58dp"
+        android:layout_height="57dp"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:onClick="onClickFischHinzufuegen"
+        android:tint="@color/white"
+        app:backgroundTint="#4CAF50"
+        app:backgroundTintMode="add"
+        app:fabSize="auto"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.90999997"
+        app:maxImageSize="80sp"
+        app:rippleColor="#FFFFFF"
+        app:srcCompat="@drawable/ic_baseline_add_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="onClickArterkennung"
+        app:backgroundTint="#4CAF50"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.90999997"
+        app:maxImageSize="50dp"
+        app:rippleColor="#FFFFFF"
+        app:srcCompat="@drawable/ic_baseline_camera_alt_24" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/homeToolbar4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/material_dynamic_neutral60"
+        android:backgroundTint="#228767"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/knowyourfish_tag"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#FDFDFD"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.00999999" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:background="#348535"
+        android:backgroundTint="#348535"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintTop_toBottomOf="@+id/homeToolbar4"
+        app:layout_constraintVertical_bias="0.00999999">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/selectKategorieSpinner"
+            android:layout_width="162dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FFFFFF"
+            android:foregroundTint="#FFFFFF"
+            android:textAlignment="textEnd" />
+
+        <ImageButton
+            android:id="@+id/filterButton"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:backgroundTint="#4CAF50"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/filter" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#131004"
+    android:isScrollContainer="true"
+    android:scrollIndicators="top"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HomeToolbar" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/InnerFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animationCache="true"
+            android:background="#E4D7D7"
+            android:backgroundTint="#226746"
+            android:backgroundTintMode="multiply"
+            android:verticalScrollbarPosition="right"
+            app:circularflow_angles="8"
+            app:circularflow_defaultAngle="6">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/ViewPagerImageSlider"
+                android:layout_width="567dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="90dp"
+                android:layout_marginBottom="50dp"
+                android:backgroundTint="#FFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/button_identification"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_identification"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="60dp"
+                android:backgroundTint="#348535"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:text="Arterkennung"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/button_statistics"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/button_statistics"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="60dp"
+                android:backgroundTint="#348535"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:text="Fangstatistik"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/button_grounds"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/button_grounds"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="100dp"
+                android:backgroundTint="#348535"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:text="Fangplätze"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="#F52BAE66"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="#FFFCFC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/HomeToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/material_dynamic_neutral60"
+        android:backgroundTint="#228767"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KnowYourFish"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#FDFDFD"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/HomeToolbar"
+        app:layout_constraintEnd_toEndOf="@+id/HomeToolbar"
+        app:layout_constraintStart_toStartOf="@+id/HomeToolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

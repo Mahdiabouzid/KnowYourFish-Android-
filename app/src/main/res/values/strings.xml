@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">KnowYourFish</string>
+    <string name="take_photo_text">Foto machen</string>
+    <string name="upload_image_text">Foto Hochladen</string>
+    <string name="dialog_message">Dieser Fisch darf gefangen werden, möchten Sie ihn in die Fangstatistik aufnehmen?</string>
+    <string name="hello_blank_fragment">hello world</string>
+    <string name="alert_yes_text">Hinzufügen</string>
+    <string name="alert_no_text">Abbrechen</string>
+    <string name="identification_text">Arterkennung</string>
+    <string name="knowyourfish_tag">KnowYourFish</string>
+
+    <string-array name="dropDownFilterFangstatistik">
+        <item>Datum</item>
+        <item>Fischart</item>
+        <item>FangOrt</item>
+    </string-array>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="try_again_text">nochmal versuchen</string>
+</resources>
